@@ -1,0 +1,134 @@
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+  padding: 60px 0 30px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Gradient Divider */
+.footer-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-accent) 50%,
+    transparent 100%
+  );
+  margin-bottom: 50px;
+  opacity: 0.5;
+}
+
+/* Branding */
+.footer-name {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  background: linear-gradient(135deg, var(--color-text) 0%, var(--color-text-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-tagline {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+/* Social Links */
+.footer-socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.footer-social-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  font-size: 1.15rem;
+  color: var(--color-text);
+  transition: var(--transition-smooth);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.footer-social-link:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 20px rgba(240, 165, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Copyright */
+.footer-copyright {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 10px;
+}
+
+/* Back to Top */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gradient-accent);
+  color: #0a0a0f;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 999;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 20px rgba(240, 165, 0, 0.3);
+}
+
+.back-to-top:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 30px rgba(240, 165, 0, 0.45);
+}
+
+.back-to-top:active {
+  transform: scale(1);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 40px 0 24px;
+  }
+
+  .footer-name {
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}

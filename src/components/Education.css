@@ -1,0 +1,242 @@
+/* ============================================
+   EDUCATION SECTION
+   ============================================ */
+
+.education {
+  padding: var(--section-padding);
+  position: relative;
+  z-index: 1;
+}
+
+.education-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* Education Card */
+.education-cards {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  position: relative;
+}
+
+/* Vertical timeline line */
+.education-cards::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 24px;
+  bottom: 24px;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 50%,
+    var(--color-primary) 100%
+  );
+  border-radius: 2px;
+  opacity: 0.3;
+}
+
+.edu-card {
+  padding: 32px;
+  padding-left: 72px;
+  margin-bottom: 24px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out,
+    border-color var(--transition-smooth),
+    box-shadow var(--transition-smooth);
+}
+
+.edu-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.edu-card:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline dot */
+.edu-card::before {
+  content: '🎓';
+  position: absolute;
+  left: 16px;
+  top: 32px;
+  font-size: 1.4rem;
+  z-index: 1;
+}
+
+.edu-card:hover {
+  border-color: rgba(13, 79, 79, 0.4);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-4px);
+}
+
+.edu-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.edu-year {
+  display: inline-block;
+  background: var(--gradient-accent);
+  color: #0a0a0f;
+  padding: 6px 20px;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.edu-degree {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.edu-institution {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+/* Stagger Delays */
+.edu-card:nth-child(1) { transition-delay: 0s; }
+.edu-card:nth-child(2) { transition-delay: 0.15s; }
+.edu-card:nth-child(3) { transition-delay: 0.3s; }
+
+/* ============================================
+   LANGUAGES SECTION
+   ============================================ */
+
+.languages-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.languages-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.language-card {
+  padding: 28px 24px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out,
+    border-color var(--transition-smooth),
+    box-shadow var(--transition-smooth);
+}
+
+.language-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.language-card:hover {
+  border-color: rgba(240, 165, 0, 0.3);
+  box-shadow: var(--shadow-accent);
+  transform: translateY(-4px);
+}
+
+.language-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.language-stars {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.star {
+  font-size: 1.2rem;
+  transition: transform var(--transition-fast);
+}
+
+.star.filled {
+  color: var(--color-accent);
+  text-shadow: 0 0 8px var(--color-accent-glow);
+}
+
+.star.unfilled {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.language-card:hover .star {
+  transform: scale(1.1);
+}
+
+/* Stagger delays */
+.language-card:nth-child(1) { transition-delay: 0.1s; }
+.language-card:nth-child(2) { transition-delay: 0.2s; }
+.language-card:nth-child(3) { transition-delay: 0.3s; }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .education-header {
+    margin-bottom: 40px;
+  }
+
+  .languages-grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .edu-card {
+    padding: 24px;
+    padding-left: 64px;
+  }
+
+  .edu-degree {
+    font-size: 1.1rem;
+  }
+
+  .education-cards::before {
+    left: 24px;
+  }
+
+  .edu-card::before {
+    left: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .edu-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .languages-title {
+    font-size: 1.3rem;
+  }
+}
