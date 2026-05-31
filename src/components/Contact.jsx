@@ -17,7 +17,7 @@ const contactCards = [
   {
     icon: '📍',
     label: 'Address',
-    value: '#3485, Street No 10, Chet Singh Nagar Gill Road, Ludhiana',
+    value: 'House #5563/4 Raghuvir Park Steet Number 5 Jassian Road, New Tagore Nagar, Haibowal Kalan Ludhiana, Punjab 141002',
     href: null,
   },
 ];
@@ -205,8 +205,8 @@ function Contact() {
                   />
                 </div>
 
-                <button 
-                  className={`contact-submit ${status === 'submitting' ? 'submitting' : ''}`} 
+                <button
+                  className={`contact-submit ${status === 'submitting' ? 'submitting' : ''}`}
                   type="submit"
                   disabled={status === 'submitting'}
                 >
