@@ -1,4 +1,5 @@
 import './Hero.css';
+import simranImg from '../assets/simran.jpeg';
 
 // Helper to convert standard Google Drive preview links into high-speed direct image streams
 const getDirectImageUrl = (url) => {
@@ -13,8 +14,7 @@ const getDirectImageUrl = (url) => {
 };
 
 export default function Hero() {
-  const envImageUrl = import.meta.env.VITE_PROFILE_IMAGE_URL;
-  const profileSrc = envImageUrl ? getDirectImageUrl(envImageUrl) : '/profile.png';
+  const profileSrc = simranImg;
   const scrollTo = (id) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });

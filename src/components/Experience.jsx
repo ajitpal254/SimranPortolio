@@ -4,8 +4,22 @@ import './Experience.css';
 const experiences = [
   {
     title: 'SEO & Digital Marketing Executive',
+    company: 'Digital Handler India',
+    period: 'Feb 2026 - Present',
+    bullets: [
+      'Manage complete On-Page, Off-Page, and Technical SEO campaigns for multiple high-traffic websites.',
+      'Successfully optimize websites according to Core Web Vitals (LCP, INP, CLS) standards to maximize site speed and user experience.',
+      'Implement advanced schema markup, structured data, canonical flags, and resolve complex search console indexing errors.',
+      'Spearhead next-gen conversational search strategies including AEO (Answer Engine) and GEO (Generative Engine) optimization.',
+      'Design customized client-facing SEO performance and traffic analytics dashboards in Looker Studio.',
+      'Coordinate with developers and content creators to align semantic keywords and ensure seamless technical execution.',
+      'Significantly improve organic search traffic, keyword positioning, and inbound lead generation.'
+    ]
+  },
+  {
+    title: 'SEO & Digital Marketing Executive',
     company: 'Punjab IT',
-    period: 'Jan 2023 - Present',
+    period: 'Jan 2023 - Dec 2025',
     bullets: [
       'Manage complete On-Page, Off-Page, and Technical SEO campaigns for multiple high-traffic websites.',
       'Successfully optimize websites according to Core Web Vitals (LCP, INP, CLS) standards to maximize site speed and user experience.',
