@@ -2,16 +2,16 @@ import './Hero.css';
 import simranImg from '../assets/simran.jpeg';
 
 // Helper to convert standard Google Drive preview links into high-speed direct image streams
-const getDirectImageUrl = (url) => {
-  if (!url) return '';
-  if (url.includes('drive.google.com')) {
-    const match = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/) || url.match(/id=([a-zA-Z0-9_-]+)/);
-    if (match && match[1]) {
-      return `https://lh3.googleusercontent.com/d/${match[1]}`;
-    }
-  }
-  return url;
-};
+// const getDirectImageUrl = (url) => {
+//   if (!url) return '';
+//   if (url.includes('drive.google.com')) {
+//     const match = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/) || url.match(/id=([a-zA-Z0-9_-]+)/);
+//     if (match && match[1]) {
+//       return `https://lh3.googleusercontent.com/d/${match[1]}`;
+//     }
+//   }
+//   return url;
+// };
 
 export default function Hero() {
   const profileSrc = simranImg;
